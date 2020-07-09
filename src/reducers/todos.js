@@ -30,5 +30,3 @@ const todos = (state = [], action) => {
   
   export default todos
 
-
-  // store ram to sto
