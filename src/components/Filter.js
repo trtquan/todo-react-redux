@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { VisibilityFilters } from "../actions";
-const Filter = ({ onFilter }) => (
+const Filter = ({ setVisibilityFilter }) => (
   <select
     name="todos"
     className="filter-todo"
-    onChange={(e) => onFilter(e.target.value)}
+    onChange={(e) => setVisibilityFilter(e.target.value)}
   >
     <option value={VisibilityFilters.SHOW_ALL}>All</option>
     <option value={VisibilityFilters.SHOW_COMPLETED}>Completed</option>
@@ -14,7 +14,7 @@ const Filter = ({ onFilter }) => (
 );
 
 Filter.propTypes = {
-  onFilter: PropTypes.func.isRequired,
+  setVisibilityFilter: PropTypes.func.isRequired,
 };
 
 export default Filter;
